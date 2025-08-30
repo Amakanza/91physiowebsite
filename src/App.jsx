@@ -288,8 +288,13 @@ export default function PhysioPracticeSite() {
                 icon: "✉️"
               },
               {
+                href: "https://maps.app.goo.gl/1EZhzDxG4BJTdFME9",
+                text: "Get Directions",
+                icon: "🗺️"
+              },
+              {
                 href: "#contact",
-                text: "Find Us & Hours",
+                text: "Contact & Hours",
                 icon: "📍"
               }
             ].map((action, index) => (
@@ -430,6 +435,14 @@ export default function PhysioPracticeSite() {
                       <div className="font-medium">Main Office</div>
                       <div>91 PHYSIO @ Rhino Street</div>
                       <div>Windhoek North, Windhoek</div>
+                      <a 
+                        href="https://maps.app.goo.gl/1EZhzDxG4BJTdFME9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 font-medium mt-1 transition-colors"
+                      >
+                        🗺️ Get Directions
+                      </a>
                     </div>
                   </div>
                   
