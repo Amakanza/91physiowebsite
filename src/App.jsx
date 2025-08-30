@@ -77,6 +77,22 @@ export default function PhysioPracticeSite() {
               💬 WhatsApp
             </a>
             <a href="mailto:reception91@iway.na" className="hover:text-emerald-300 transition-colors">✉️ Email</a>
+            <a 
+              href="https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-emerald-300 transition-colors"
+            >
+              📘 Facebook
+            </a>
+            <a 
+              href="https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-emerald-300 transition-colors"
+            >
+              📷 Instagram
+            </a>
           </div>
         </div>
       </div>
@@ -460,6 +476,34 @@ export default function PhysioPracticeSite() {
                     <span className="text-emerald-600">✉️</span>
                     <div>Email: reception91@iway.na</div>
                   </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <span className="text-emerald-600">📘</span>
+                    <div>
+                      <a 
+                        href="https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
+                      >
+                        Follow us on Facebook
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <span className="text-emerald-600">📷</span>
+                    <div>
+                      <a 
+                        href="https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
+                      >
+                        Follow us on Instagram
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="mt-8 p-6 bg-emerald-50 rounded-xl border border-emerald-200">
@@ -505,6 +549,25 @@ export default function PhysioPracticeSite() {
                 >
                   📱 Call Mobile
                 </a>
+                
+                <div className="flex gap-2">
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex-1 border border-slate-300 text-slate-600 rounded-lg px-4 py-3 font-medium text-center hover:bg-slate-50 transition-colors text-sm"
+                  >
+                    📘 Facebook
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex-1 border border-slate-300 text-slate-600 rounded-lg px-4 py-3 font-medium text-center hover:bg-slate-50 transition-colors text-sm"
+                  >
+                    📷 Instagram
+                  </a>
+                </div>
               </div>
               
               <p className="mt-4 text-xs text-slate-500 text-center">
@@ -536,6 +599,20 @@ export default function PhysioPracticeSite() {
                 rel="noopener noreferrer"
                 className="hover:text-emerald-400 transition-colors">
                 💬 WhatsApp
+              </a>
+              <a 
+                href="https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 transition-colors">
+                📘 Facebook
+              </a>
+              <a 
+                href="https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 transition-colors">
+                📷 Instagram
               </a>
             </div>
           </div>
