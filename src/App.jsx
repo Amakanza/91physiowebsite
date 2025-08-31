@@ -378,7 +378,7 @@ export default function PhysioPracticeSite() {
               },
               {
                 question: "What should I bring to my first appointment?",
-                answer: "Please bring a form of ID, your medical aid card (if applicable), any recent medical reports or scans related to your condition, a list of current medications, and wear comfortable clothing that allows easy access to the area being treated."
+                answer: "Please bring a form of ID, your medical aid card (if applicable), any recent medical reports or scans related to your condition (digital version works as well), a list of current medications, and wear comfortable clothing that allows easy access to the area being treated."
               },
               {
                 question: "Do you accept medical aid?",
@@ -386,7 +386,7 @@ export default function PhysioPracticeSite() {
               },
               {
                 question: "How long is a typical physiotherapy session?",
-                answer: "Initial consultations typically last 45-60 minutes, which includes assessment, diagnosis, and initial treatment. Follow-up sessions are usually 30-45 minutes. The exact duration may vary depending on your specific condition and treatment needs."
+                answer: "Our sessions last 40 minutes, which includes assessment, diagnosis, and  treatment."
               },
               {
                 question: "Do you offer home visits?",
@@ -398,7 +398,7 @@ export default function PhysioPracticeSite() {
               },
               {
                 question: "How soon can I get an appointment?",
-                answer: "Appointment availability varies depending on urgency and our current schedule. We prioritize urgent cases and typically have availability within a few days. Contact us via WhatsApp or phone for the most up-to-date availability and to discuss any urgent needs."
+                answer: "Appointment availability varies depending on our current schedule. We work on a first-come first-serve basis and typically have availability within a few days. Contact us via WhatsApp or phone for the most up-to-date availability and to discuss any urgent needs."
               },
               {
                 question: "What are your payment options?",
