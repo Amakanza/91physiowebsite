@@ -81,17 +81,19 @@ export default function PhysioPracticeSite() {
               href="https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:text-emerald-300 transition-colors"
+              className="hover:text-emerald-300 transition-colors flex items-center gap-2"
             >
-              📘 Facebook
+              <img src="/facebook-icon.png" alt="Facebook" className="w-4 h-4" />
+              Facebook
             </a>
             <a 
               href="https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:text-emerald-300 transition-colors"
+              className="hover:text-emerald-300 transition-colors flex items-center gap-2"
             >
-              📷 Instagram
+              <img src="/instagram-icon.png" alt="Instagram" className="w-4 h-4" />
+              Instagram
             </a>
           </div>
         </div>
@@ -478,7 +480,9 @@ export default function PhysioPracticeSite() {
                   </div>
                   
                   <div className="flex items-center gap-3">
-                    <span className="text-emerald-600">📘</span>
+                    <span className="text-emerald-600">
+                      <img src="/facebook-icon.png" alt="Facebook" className="w-5 h-5" />
+                    </span>
                     <div>
                       <a 
                         href="https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy"
@@ -492,7 +496,9 @@ export default function PhysioPracticeSite() {
                   </div>
                   
                   <div className="flex items-center gap-3">
-                    <span className="text-emerald-600">📷</span>
+                    <span className="text-emerald-600">
+                      <img src="/instagram-icon.png" alt="Instagram" className="w-5 h-5" />
+                    </span>
                     <div>
                       <a 
                         href="https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
@@ -555,17 +561,19 @@ export default function PhysioPracticeSite() {
                     href="https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex-1 border border-slate-300 text-slate-600 rounded-lg px-4 py-3 font-medium text-center hover:bg-slate-50 transition-colors text-sm"
+                    className="flex-1 border border-slate-300 text-slate-600 rounded-lg px-4 py-3 font-medium text-center hover:bg-slate-50 transition-colors text-sm flex items-center justify-center gap-2"
                   >
-                    📘 Facebook
+                    <img src="/facebook-icon.png" alt="Facebook" className="w-4 h-4" />
+                    Facebook
                   </a>
                   <a 
                     href="https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex-1 border border-slate-300 text-slate-600 rounded-lg px-4 py-3 font-medium text-center hover:bg-slate-50 transition-colors text-sm"
+                    className="flex-1 border border-slate-300 text-slate-600 rounded-lg px-4 py-3 font-medium text-center hover:bg-slate-50 transition-colors text-sm flex items-center justify-center gap-2"
                   >
-                    📷 Instagram
+                    <img src="/instagram-icon.png" alt="Instagram" className="w-4 h-4" />
+                    Instagram
                   </a>
                 </div>
               </div>
@@ -604,15 +612,17 @@ export default function PhysioPracticeSite() {
                 href="https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-emerald-400 transition-colors">
-                📘 Facebook
+                className="hover:text-emerald-400 transition-colors flex items-center gap-1">
+                <img src="/facebook-icon.png" alt="Facebook" className="w-4 h-4" />
+                Facebook
               </a>
               <a 
                 href="https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-emerald-400 transition-colors">
-                📷 Instagram
+                className="hover:text-emerald-400 transition-colors flex items-center gap-1">
+                <img src="/instagram-icon.png" alt="Instagram" className="w-4 h-4" />
+                Instagram
               </a>
             </div>
           </div>
