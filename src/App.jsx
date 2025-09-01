@@ -550,3 +550,447 @@ export default function PhysioPracticeSite() {
                   text: "✉️ Email Us",
                   primary: false
                 }
+              ].map((button, index) => (
+                <a
+                  key={index}
+                  href={button.href}
+                  target={button.href.startsWith('http') ? '_blank' : undefined}
+                  rel={button.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className={`transform transition-all duration-500 hover:scale-105 hover:-translate-y-1 ${
+                    isVisible['booking'] 
+                      ? 'translate-y-0 opacity-100' 
+                      : 'translate-y-8 opacity-0'
+                  } ${
+                    button.primary
+                      ? "bg-white text-emerald-600 rounded-xl px-8 py-4 font-semibold hover:bg-slate-50 hover:shadow-2xl shadow-lg group"
+                      : "bg-transparent border-2 border-white text-white rounded-xl px-8 py-4 font-semibold hover:bg-white hover:text-emerald-600 hover:shadow-xl"
+                  }`}
+                  style={{ transitionDelay: `${600 + index * 200}ms` }}
+                >
+                  <span className={button.primary ? "group-hover:animate-pulse" : ""}>{button.text}</span>
+                </a>
+              ))}
+            </div>
+            
+            <div 
+              className={`transform transition-all duration-1000 ${
+                isVisible['booking'] 
+                  ? 'translate-y-0 opacity-100' 
+                  : 'translate-y-4 opacity-0'
+              }`}
+              style={{ transitionDelay: '1200ms' }}
+            >
+              <p className="text-sm text-emerald-200 animate-fade-in animation-delay-1200">
+                📅 Hours: Mon–Fri 07:30–18:00 · Sat 08:00–13:00 · Sun & Public Holidays Closed
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 bg-white relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-50 rounded-full -translate-y-24 translate-x-24 animate-float-slow" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full translate-y-32 -translate-x-32 animate-float-delayed" />
+        
+        <div className="max-w-4xl mx-auto px-4 relative">
+          <div 
+            className={`text-center mb-16 transform transition-all duration-1000 ${
+              isVisible['faq-header'] ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+            }`}
+            data-animate="faq-header"
+          >
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-slate-600">
+              Common questions about our physiotherapy services and booking process
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            {[
+              {
+                question: "Do I need a doctor's referral to book an appointment?",
+                answer: "No, you don't need a referral! As first-line practitioners, we can assess and treat you directly. You can book an appointment with us without needing to see your GP first. However, if you have medical aid, check if they require a referral for reimbursement purposes."
+              },
+              {
+                question: "What should I bring to my first appointment?",
+                answer: "Please bring a form of ID, your medical aid card (if applicable), any recent medical reports or scans related to your condition (digital version works as well), a list of current medications, and wear comfortable clothing that allows easy access to the area being treated."
+              },
+              {
+                question: "Do you accept medical aid?",
+                answer: "Yes, we offer direct medical aid claiming for your convenience. We work with most major medical aid schemes in Namibia. Please bring your medical aid card to your appointment, and we'll handle the claiming process for you."
+              },
+              {
+                question: "How long is a typical physiotherapy session?",
+                answer: "Our sessions last 40 minutes, which includes assessment, diagnosis, and treatment."
+              },
+              {
+                question: "Do you offer home visits?",
+                answer: "Yes, we provide home visit services for patients who cannot easily travel to our clinic. This includes post-hospital discharge rehabilitation, elderly care, mobility training, and equipment advice. Contact us to discuss your specific needs and arrange a home visit."
+              },
+              {
+                question: "What conditions do you treat?",
+                answer: "We treat a wide range of conditions including musculoskeletal injuries (back pain, sports injuries), cardiorespiratory conditions (chest physiotherapy, breathing problems), neurological conditions (stroke rehabilitation, balance issues), and pediatric conditions (cerebral palsy, developmental delays)."
+              },
+              {
+                question: "How soon can I get an appointment?",
+                answer: "Appointment availability varies depending on our current schedule. We work on a first-come first-serve basis and typically have availability within a few days. Contact us via WhatsApp or phone for the most up-to-date availability and to discuss any urgent needs."
+              },
+              {
+                question: "What are your payment options?",
+                answer: "We accept cash, card payments, and direct medical aid claiming. If you're paying privately, payment is expected at the time of service. For medical aid patients, we handle the claiming process directly with your scheme where possible."
+              }
+            ].map((faq, index) => (
+              <div 
+                key={index} 
+                className={`bg-slate-50 rounded-xl p-6 border border-slate-200 hover:border-emerald-200 hover:shadow-lg transform transition-all duration-500 hover:scale-102 hover:-translate-y-1 group ${
+                  isVisible[`faq-${index}`] 
+                    ? 'translate-y-0 opacity-100' 
+                    : 'translate-y-8 opacity-0'
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+                data-animate={`faq-${index}`}
+              >
+                <h3 className="text-lg font-semibold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div 
+            className={`mt-12 text-center transform transition-all duration-1000 ${
+              isVisible['faq-cta'] ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+            }`}
+            data-animate="faq-cta"
+          >
+            <div className="bg-emerald-50 rounded-xl p-8 border border-emerald-200 hover:border-emerald-300 transition-all duration-300 hover:shadow-lg">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Still Have Questions?</h3>
+              <p className="text-slate-600 mb-6">
+                Don't see your question answered above? Our team is happy to help with any specific concerns or queries you may have.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a
+                  href="https://wa.me/264813719494?text=Hi%20Ronelle%20Isaacs%20Physiotherapists%2C%20I%20have%20a%20question%20about%20your%20services."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-emerald-600 text-white rounded-xl px-6 py-3 font-semibold hover:bg-emerald-700 hover:scale-105 hover:shadow-lg transition-all duration-300 group"
+                >
+                  <span className="group-hover:animate-pulse">💬 Ask on WhatsApp</span>
+                </a>
+                <a href="tel:+264813719494" className="border-2 border-emerald-600 text-emerald-600 rounded-xl px-6 py-3 font-semibold hover:bg-emerald-50 hover:scale-105 hover:shadow-lg transition-all duration-300">
+                  📱 Call Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-slate-50 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute top-20 left-10 w-40 h-40 bg-emerald-100/40 rounded-full animate-float-slow" />
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-100/40 rounded-full animate-float-delayed" />
+        
+        <div className="max-w-7xl mx-auto px-4 relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div 
+              className={`transform transition-all duration-1000 ${
+                isVisible['contact-info'] ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
+              }`}
+              data-animate="contact-info"
+            >
+              <h2 className="text-4xl font-bold text-slate-900 mb-8">Find Your Physiotherapist</h2>
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl p-8 border border-slate-200 transform hover:scale-102 transition-all duration-500">
+                <h3 className="text-2xl font-semibold text-slate-900 mb-4">Ronelle Isaacs Physiotherapists</h3>
+                <div className="space-y-4 text-slate-600">
+                  {[
+                    {
+                      icon: "📍",
+                      title: "Main Office",
+                      content: (
+                        <div>
+                          <div>91 PHYSIO @ Rhino Street</div>
+                          <div>Windhoek North, Windhoek</div>
+                          <a 
+                            href="https://maps.app.goo.gl/1EZhzDxG4BJTdFME9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 font-medium mt-1 transition-all duration-300 hover:scale-105"
+                          >
+                            🗺️ Get Directions
+                          </a>
+                        </div>
+                      )
+                    },
+                    {
+                      icon: "📱",
+                      content: "Mobile/WhatsApp: +264 81 371 9494"
+                    },
+                    {
+                      icon: "📞",
+                      content: "Phone (Reception): +264 61 255 337"
+                    },
+                    {
+                      icon: "✉️",
+                      content: "Email: reception91@iway.na"
+                    }
+                  ].map((item, index) => (
+                    <div 
+                      key={index}
+                      className={`flex items-start gap-3 transform transition-all duration-500 hover:scale-105 hover:text-emerald-600 ${
+                        isVisible['contact-info'] 
+                          ? 'translate-x-0 opacity-100' 
+                          : 'translate-x-4 opacity-0'
+                      }`}
+                      style={{ transitionDelay: `${400 + index * 150}ms` }}
+                    >
+                      <span className="text-emerald-600 mt-1 animate-bounce-subtle">{item.icon}</span>
+                      <div>
+                        {item.title && <div className="font-medium">{item.title}</div>}
+                        {item.content}
+                      </div>
+                    </div>
+                  ))}
+                  
+                  {/* Social Media Links */}
+                  <div className="space-y-3 pt-4 border-t border-slate-200">
+                    {[
+                      {
+                        href: "https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy",
+                        text: "Follow us on Facebook",
+                        icon: "/facebook-icon.png"
+                      },
+                      {
+                        href: "https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+                        text: "Follow us on Instagram", 
+                        icon: "/instagram-icon.png"
+                      }
+                    ].map((social, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <span className="text-emerald-600">
+                          <img src={social.icon} alt={social.text.split(' ')[3]} className="w-5 h-5 hover:scale-110 transition-transform duration-300" />
+                        </span>
+                        <div>
+                          <a 
+                            href={social.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-emerald-600 hover:text-emerald-700 font-medium transition-all duration-300 hover:scale-105 inline-block"
+                          >
+                            {social.text}
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div 
+                  className={`mt-8 p-6 bg-emerald-50 rounded-xl border border-emerald-200 transform transition-all duration-700 hover:shadow-lg ${
+                    isVisible['contact-info'] 
+                      ? 'translate-y-0 opacity-100' 
+                      : 'translate-y-4 opacity-0'
+                  }`}
+                  style={{ transitionDelay: '1000ms' }}
+                >
+                  <h4 className="font-semibold text-slate-900 mb-4">Operating Hours</h4>
+                  <div className="space-y-2 text-sm text-slate-600">
+                    {[
+                      { days: "Monday – Friday:", hours: "07:30 – 18:00" },
+                      { days: "Saturday:", hours: "08:00 – 13:00" },
+                      { days: "Sunday & Public Holidays:", hours: "Closed", closed: true }
+                    ].map((schedule, index) => (
+                      <div 
+                        key={index}
+                        className={`flex justify-between hover:bg-white hover:px-2 hover:py-1 rounded transition-all duration-300 ${
+                          schedule.closed ? 'text-red-600' : ''
+                        }`}
+                      >
+                        <span>{schedule.days}</span>
+                        <span className="font-medium">{schedule.hours}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div 
+              className={`bg-white rounded-2xl shadow-lg hover:shadow-xl p-8 border border-slate-200 transform transition-all duration-1000 hover:scale-102 ${
+                isVisible['contact-form'] ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'
+              }`}
+              data-animate="contact-form"
+            >
+              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Get In Touch</h3>
+              <p className="text-slate-600 mb-6">
+                Messages go straight to WhatsApp—our team will guide you from there. 
+                No web forms, just direct communication.
+              </p>
+              
+              <div className="space-y-4">
+                {[
+                  {
+                    href: "https://wa.me/264813719494?text=Hi%20Ronelle%20Isaacs%20Physiotherapists%2C%20I%27d%20like%20to%20enquire%20about%20physiotherapy.",
+                    text: "💬 Open WhatsApp",
+                    primary: true
+                  },
+                  {
+                    href: "tel:+264813719494",
+                    text: "📱 Call Mobile",
+                    primary: false
+                  }
+                ].map((button, index) => (
+                  <a
+                    key={index}
+                    href={button.href}
+                    target={button.href.startsWith('http') ? '_blank' : undefined}
+                    rel={button.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className={`block w-full rounded-xl px-6 py-4 font-semibold text-center transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-lg group ${
+                      isVisible['contact-form'] 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-4 opacity-0'
+                    } ${
+                      button.primary
+                        ? "bg-emerald-600 text-white hover:bg-emerald-700 hover:shadow-xl"
+                        : "border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50"
+                    }`}
+                    style={{ transitionDelay: `${400 + index * 200}ms` }}
+                  >
+                    <span className={button.primary ? "group-hover:animate-pulse" : ""}>{button.text}</span>
+                  </a>
+                ))}
+                
+                <div 
+                  className={`flex gap-2 transform transition-all duration-700 ${
+                    isVisible['contact-form'] 
+                      ? 'translate-y-0 opacity-100' 
+                      : 'translate-y-4 opacity-0'
+                  }`}
+                  style={{ transitionDelay: '800ms' }}
+                >
+                  {[
+                    {
+                      href: "https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy",
+                      text: "Facebook",
+                      icon: "/facebook-icon.png"
+                    },
+                    {
+                      href: "https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+                      text: "Instagram",
+                      icon: "/instagram-icon.png"
+                    }
+                  ].map((social, index) => (
+                    <a 
+                      key={index}
+                      href={social.href}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex-1 border border-slate-300 text-slate-600 rounded-lg px-4 py-3 font-medium text-center hover:bg-slate-50 hover:scale-105 hover:shadow-md transition-all duration-300 text-sm flex items-center justify-center gap-2 group"
+                    >
+                      <img src={social.icon} alt={social.text} className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                      {social.text}
+                    </a>
+                  ))}
+                </div>
+              </div>
+              
+              <p 
+                className={`mt-4 text-xs text-slate-500 text-center transform transition-all duration-700 ${
+                  isVisible['contact-form'] 
+                    ? 'translate-y-0 opacity-100' 
+                    : 'translate-y-2 opacity-0'
+                }`}
+                style={{ transitionDelay: '1000ms' }}
+              >
+                We reply fastest on WhatsApp during business hours
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-slate-900 text-white relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute top-0 left-0 w-24 h-24 bg-emerald-500/10 rounded-full animate-float-slow" />
+        <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full animate-float-delayed" />
+        
+        <div className="max-w-7xl mx-auto px-4 relative">
+          <div 
+            className={`flex flex-col sm:flex-row items-center justify-between gap-6 transform transition-all duration-1000 ${
+              isVisible['footer'] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            }`}
+            data-animate="footer"
+          >
+            <div className="text-center sm:text-left">
+              <div className="font-semibold text-lg mb-2 hover:text-emerald-400 transition-colors duration-300 cursor-default">
+                Ronelle Isaacs Physiotherapists
+              </div>
+              <div className="text-slate-400 text-sm">
+                © {new Date().getFullYear()} · Windhoek North · Namibia
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-6 text-sm">
+              {[
+                {
+                  href: "tel:+264813719494",
+                  text: "📱 +264 81 371 9494"
+                },
+                {
+                  href: "https://wa.me/264813719494",
+                  text: "💬 WhatsApp"
+                },
+                {
+                  href: "https://www.facebook.com/profile.php?id=100057088824283&mibextid=sCpJLy",
+                  text: "Facebook",
+                  icon: "/facebook-icon.png"
+                },
+                {
+                  href: "https://www.instagram.com/91physio_ronelle_isaacs_physio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+                  text: "Instagram", 
+                  icon: "/instagram-icon.png"
+                }
+              ].map((link, index) => (
+                <a 
+                  key={index}
+                  href={link.href}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                  rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className={`hover:text-emerald-400 hover:scale-110 transition-all duration-300 flex items-center gap-1 group ${
+                    isVisible['footer'] 
+                      ? 'translate-y-0 opacity-100' 
+                      : 'translate-y-4 opacity-0'
+                  }`}
+                  style={{ transitionDelay: `${400 + index * 150}ms` }}
+                >
+                  {link.icon && (
+                    <img 
+                      src={link.icon} 
+                      alt={link.text} 
+                      className="w-4 h-4 group-hover:scale-125 transition-transform duration-300" 
+                    />
+                  )}
+                  <span className="group-hover:animate-pulse">{link.text}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+          
+          <div 
+            className={`mt-8 pt-8 border-t border-slate-700 text-center transform transition-all duration-1000 ${
+              isVisible['footer'] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            }`}
+            style={{ transitionDelay: '1000ms' }}
+          >
+            <p className="text-xs text-slate-500 hover:text-slate-400 transition-colors duration-300 cursor-default">
+              Professional physiotherapy services · Evidence-based treatment · First-line practitioners
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
