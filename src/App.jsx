@@ -278,40 +278,6 @@ export default function PhysioPracticeSite() {
             </p>
           </div>
 
-          {/* Stats Section with Counter Animation */}
-          <div 
-            className={`mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 transform transition-all duration-1000 ${
-              isVisible['stats'] ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-            }`}
-            data-animate="stats"
-          >
-            {[
-              { number: 15, label: "Years Experience", suffix: "+" },
-              { number: 1000, label: "Happy Patients", suffix: "+" },
-              { number: 4, label: "Specializations", suffix: "" },
-              { number: 6, label: "Days a Week", suffix: "" }
-            ].map((stat, index) => {
-              const [count, setIsActive] = useCountUp(stat.number);
-              
-              useEffect(() => {
-                if (isVisible['stats']) {
-                  setTimeout(() => setIsActive(true), index * 200);
-                }
-              }, [isVisible['stats'], setIsActive, index]);
-
-              return (
-                <div key={index} className="text-center group cursor-default">
-                  <div className="text-3xl md:text-4xl font-bold text-emerald-600 mb-2 group-hover:scale-110 transition-transform duration-300">
-                    {count}{stat.suffix}
-                  </div>
-                  <div className="text-sm md:text-base text-slate-600 font-medium">{stat.label}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Interactive Services Section */}
       <section id="services" className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4">
