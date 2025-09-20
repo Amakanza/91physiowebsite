@@ -1,0 +1,70 @@
+// Analytics utility functions
+
+// Track custom events
+export const trackEvent = (eventName, parameters = {}) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', eventName, parameters);
+  } else {
+    // Fallback for development or when GA4 isn't loaded
+    console.log('Analytics Event:', eventName, parameters);
+  }
+};
+
+// Specific tracking functions for your use cases
+export const trackWhatsAppClick = (context = 'unknown') => {
+  trackEvent('whatsapp_click', {
+    contact_method: 'whatsapp',
+    context: context, // e.g., 'hero', 'booking', 'contact', 'faq'
+    custom_parameter_1: 'physiotherapy_inquiry'
+  });
+};
+
+export const trackPhoneClick = (phoneType = 'mobile', context = 'unknown') => {
+  trackEvent('phone_click', {
+    contact_method: 'phone',
+    phone_type: phoneType, // 'mobile' or 'reception'
+    context: context,
+    custom_parameter_1: 'physiotherapy_inquiry'
+  });
+};
+
+export const trackEmailClick = (context = 'unknown') => {
+  trackEvent('email_click', {
+    contact_method: 'email',
+    context: context,
+    custom_parameter_1: 'physiotherapy_inquiry'
+  });
+};
+
+export const trackSocialClick = (platform, context = 'unknown') => {
+  trackEvent('social_click', {
+    contact_method: 'social',
+    platform: platform, // 'facebook' or 'instagram'
+    context: context,
+    custom_parameter_1: 'physiotherapy_follow'
+  });
+};
+
+export const trackDirectionsClick = (context = 'unknown') => {
+  trackEvent('directions_click', {
+    contact_method: 'directions',
+    context: context,
+    custom_parameter_1: 'physiotherapy_visit'
+  });
+};
+
+// Page section view tracking
+export const trackSectionView = (sectionName) => {
+  trackEvent('section_view', {
+    section_name: sectionName,
+    engagement_time_msec: Date.now()
+  });
+};
+
+// Booking intent tracking
+export const trackBookingIntent = (method) => {
+  trackEvent('booking_intent', {
+    booking_method: method,
+    value: 1 // You can assign values to track conversion value
+  });
+};
