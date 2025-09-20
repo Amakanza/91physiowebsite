@@ -320,7 +320,7 @@ export default function PhysioPracticeSite() {
             <h2 className="text-4xl font-bold text-slate-900 mb-6 animate-fade-in-up">Our Philosophy</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-300">
               The body is wonderfully complex. As first-line practitioners, we are trained to give you 
-              evidence-based evaluation and expert treatment plans for the best conservative management. 
+              evidence-based evaluation and expert treatment plans for physiotherapy management. 
               Let us hear your story, and let us be part of the solution.
             </p>
           </div>
